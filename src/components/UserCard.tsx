@@ -1,11 +1,15 @@
 import { FaUserCircle } from "react-icons/fa";
 
-interface UserCardProps {
-  index: number;
-  person: string;
+interface User {
+  name: string;
+  following: boolean;
 }
 
-const UserCard = ({ index, person }: UserCardProps) => {
+interface UserCardProps {
+  person: User;
+}
+
+const UserCard = ({ person }: UserCardProps) => {
   return (
     <div className="flex items-center justify-between">
       <section className="flex items-center">

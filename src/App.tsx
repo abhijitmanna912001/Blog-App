@@ -12,10 +12,11 @@ import ArticleList from "./components/ArticleList";
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [editingBlog, setEditingBlog] = useState<Blog | null>(null);
+  const [editingBlog, setEditingBlog] = useState<Blog | undefined>(undefined);
+
 
   const openModalForNewBlog = () => {
-    setEditingBlog(null);
+    setEditingBlog(undefined);
     setModalOpen(true);
   };
 
